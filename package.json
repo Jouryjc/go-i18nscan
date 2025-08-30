@@ -1,10 +1,10 @@
 {
-  "name": "i18nscan",
+  "name": "go-i18nscan",
   "version": "1.0.0",
   "description": "Go项目中文词条提取器 - 基于AST解析识别i18n函数中的中文词条",
   "main": "src/index.js",
   "bin": {
-    "i18nscan": "./bin/cli.js"
+    "i18nscan": "bin/cli.js"
   },
   "scripts": {
     "start": "node src/index.js",

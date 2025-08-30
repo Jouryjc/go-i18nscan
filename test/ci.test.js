@@ -70,7 +70,7 @@ describe('CI/CD 核心功能测试', () => {
     const packagePath = path.join(__dirname, '../package.json');
     const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
     
-    expect(packageJson.name).toBe('i18nscan');
+    expect(packageJson.name).toBe('go-i18nscan');
     expect(packageJson.version).toBeDefined();
     expect(packageJson.main).toBeDefined();
     expect(packageJson.bin).toBeDefined();
