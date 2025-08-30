@@ -150,7 +150,7 @@ describe('ChineseExtractor', () => {
     test('extractFromAst应该从AST结果中提取中文词条', () => {
       const astResult = {
         file: '/test/main.go',
-        callExprs: [
+        calls: [
           {
             function: 't',
             args: [
@@ -196,10 +196,10 @@ describe('ChineseExtractor', () => {
       expect(result[1].text).toBe('欢迎使用');
     });
     
-    test('extractFromAst应该处理空的callExprs', () => {
+    test('extractFromAst应该处理空的calls', () => {
       const astResult = {
         file: '/test/main.go',
-        callExprs: []
+        calls: []
       };
       
       const result = extractor.extractFromAst(astResult);
@@ -209,7 +209,7 @@ describe('ChineseExtractor', () => {
     test('extractFromAst应该处理无效的AST结果', () => {
       const astResult = {
         file: '/test/main.go'
-        // 缺少 callExprs
+        // 缺少 calls
       };
       
       const result = extractor.extractFromAst(astResult);
@@ -225,7 +225,7 @@ describe('ChineseExtractor', () => {
           file: '/test/file1.go',
           ast: {
             file: '/test/file1.go',
-            callExprs: [
+            calls: [
               {
                 function: 't',
                 args: [{
@@ -243,7 +243,7 @@ describe('ChineseExtractor', () => {
           file: '/test/file2.go',
           ast: {
             file: '/test/file2.go',
-            callExprs: [
+            calls: [
               {
                 function: 'i18n.T',
                 args: [{

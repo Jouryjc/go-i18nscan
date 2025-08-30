@@ -175,6 +175,32 @@ text,file,position_start,position_end,argument_index,extracted_at
 - Node.js >= 14.0.0
 - Go >= 1.16 (用于AST解析)
 
+## 开发和发布
+
+### 自动发布
+
+本项目使用GitHub Actions实现自动化发布流程：
+
+1. **更新版本**：
+   ```bash
+   npm version patch  # 或 minor/major
+   ```
+
+2. **推送到master分支**：
+   ```bash
+   git push origin master
+   ```
+
+3. **自动触发**：GitHub Actions会自动运行测试并发布到NPM
+
+### 发布要求
+
+- 所有测试必须通过
+- 版本号必须是新的（未在NPM上发布过）
+- 需要配置NPM_TOKEN secret
+
+详细配置说明请参考 [.github/README.md](.github/README.md)
+
 ## 许可证
 
 MIT License

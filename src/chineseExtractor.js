@@ -34,8 +34,18 @@ class ChineseExtractor {
   buildFunctionPatterns() {
     const patterns = [];
     
-    // 从配置中获取函数名
-    const functionNames = this.config.i18n_functions?.map(f => f.name) || ['t', 'i18n.T', 'Translate'];
+    // 从配置中获取函数名，支持两种格式
+    let functionNames;
+    if (this.config.i18n_functions) {
+      // 新格式：对象数组
+      functionNames = this.config.i18n_functions.map(f => f.name);
+    } else if (this.config.i18nFunctions) {
+      // 旧格式：字符串数组
+      functionNames = this.config.i18nFunctions;
+    } else {
+      // 默认值
+      functionNames = ['t', 'i18n.T', 'Translate'];
+    }
     
     // 构建精确匹配模式
     functionNames.forEach(name => {
@@ -60,8 +70,22 @@ class ChineseExtractor {
 
     astResult.calls.forEach(callExpr => {
       if (this.isI18nFunction(callExpr.function)) {
-        const chineseTerms = this.extractChineseFromArgs(callExpr.args, astResult.file);
-        extractedTerms.push(...chineseTerms);
+        // 处理AST节点参数
+        callExpr.args.forEach((arg, index) => {
+          const chineseText = this.extractChineseFromNode(arg);
+          if (chineseText) {
+            extractedTerms.push({
+              text: chineseText,
+              file: astResult.file,
+              position: {
+                start: arg.pos || 0,
+                end: arg.end || 0
+              },
+              argumentIndex: index,
+              extractedAt: new Date().toISOString()
+            });
+          }
+        });
       }
     });
 
