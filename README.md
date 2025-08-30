@@ -1,5 +1,11 @@
 # i18nscan - Go项目中文词条提取器
 
+[![NPM Version](https://img.shields.io/npm/v/go-i18nscan.svg)](https://www.npmjs.com/package/go-i18nscan)
+[![CI Status](https://github.com/Jouryjc/go-i18nscan/workflows/Publish%20to%20NPM/badge.svg)](https://github.com/Jouryjc/go-i18nscan/actions)
+[![Coverage Status](https://img.shields.io/badge/coverage-37.42%25-orange.svg)](#)
+[![License](https://img.shields.io/npm/l/go-i18nscan.svg)](https://github.com/Jouryjc/go-i18nscan/blob/master/LICENSE)
+[![Downloads](https://img.shields.io/npm/dm/go-i18nscan.svg)](https://www.npmjs.com/package/go-i18nscan)
+
 一个专门用于从Go项目中提取中文词条的工具，支持AST解析和智能识别i18n函数调用。
 
 ## 功能特性
