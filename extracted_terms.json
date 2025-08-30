@@ -1,13 +1,304 @@
 {
   "metadata": {
-    "extractedAt": "2025-08-30T14:37:24.112Z",
-    "totalTerms": 0,
+    "extractedAt": "2025-08-30T14:45:28.655Z",
+    "totalTerms": 29,
     "summary": {
       "totalFiles": 1,
       "successFiles": 1,
       "errorFiles": 0,
-      "totalTerms": 0
+      "totalTerms": 29
     }
   },
-  "terms": []
+  "terms": [
+    {
+      "text": "你好，世界！",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.650Z"
+    },
+    {
+      "text": "欢迎使用i18n扫描器",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "用户登录成功",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "这是一个测试消息",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "`这是一个\n多行的中文消息\n用于测试`",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "Error: 用户名不能为空",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "价格：￥100.00",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "用户名不能为空",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "密码不能为空",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "用户名或密码错误",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "登录成功",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "商品名称：%s\\n",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "商品价格：%.2f\\n",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "库存数量：%d\\n",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "商品已售罄",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "库存不足，请及时补货",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "正在处理订单...",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "处理商品：%s，数量：%d\\n",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "订单总金额：%.2f元\\n",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "订单确认",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "您的订单已确认，订单号：",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "订单处理完成",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "网络连接错误，请检查网络设置",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "数据库连接失败，请联系管理员",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "权限不足，无法执行此操作",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "未知错误：",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "正在加载配置文件...",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "配置文件不存在，使用默认配置",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    },
+    {
+      "text": "配置文件加载成功",
+      "file": "sample.go",
+      "position": {
+        "start": 0,
+        "end": 0
+      },
+      "argumentIndex": 0,
+      "extractedAt": "2025-08-30T14:45:28.654Z"
+    }
+  ]
 }

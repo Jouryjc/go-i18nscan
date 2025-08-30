@@ -216,7 +216,9 @@ class ChineseExtractor {
     astResults.forEach(result => {
       if (result.success) {
         try {
-          const terms = this.extractFromAst(result.ast);
+          // result.ast是一个数组，取第一个元素
+          const astData = Array.isArray(result.ast) ? result.ast[0] : result.ast;
+          const terms = this.extractFromAst(astData);
           allTerms.push(...terms);
           summary.successFiles++;
           summary.totalTerms += terms.length;
