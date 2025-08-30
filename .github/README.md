@@ -40,9 +40,14 @@
 1. 登录 [npmjs.com](https://www.npmjs.com/)
 2. 点击头像 > Access Tokens
 3. 点击 "Generate New Token"
-4. 选择 "Automation" 类型
-5. 复制生成的token
+4. 选择 "Automation" 类型（重要：必须选择此类型才能用于CI/CD）
+5. 复制生成的token（格式类似：npm_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx）
 6. 在GitHub仓库中添加名为 `NPM_TOKEN` 的secret
+
+**重要提示：**
+- Token 类型必须是 "Automation" 或 "Publish"
+- Token 必须有发布权限
+- 确保你的NPM账户有发布该包的权限
 
 ### GITHUB_TOKEN
 
@@ -85,18 +90,32 @@
 
 ### 常见问题
 
-1. **NPM发布失败**
+1. **NPM认证失败 (ENEEDAUTH)**
+   ```
+   npm error code ENEEDAUTH
+   npm error need auth This command requires you to be logged in
+   ```
+   **解决方案：**
+   - 确认已在GitHub Secrets中添加 `NPM_TOKEN`
+   - 检查Token类型是否为 "Automation" 或 "Publish"
+   - 验证Token格式正确（npm_xxxxxxxxxx）
+   - 确认NPM账户有发布权限
+
+2. **NPM发布失败**
    - 检查NPM_TOKEN是否正确配置
    - 确认包名在NPM上可用
    - 检查版本号是否已存在
+   - 验证包名是否符合NPM命名规范
 
-2. **测试失败**
-   - 本地运行 `npm test` 确保测试通过
+3. **测试失败**
+   - 本地运行 `npm run test:ci` 确保测试通过
    - 检查Go环境是否正确安装
+   - 确认所有依赖已正确安装
 
-3. **版本冲突**
+4. **版本冲突**
    - 确保package.json中的版本号是新的
    - 使用 `npm version` 命令正确更新版本
+   - 检查NPM上是否已存在相同版本
 
 ### 调试方法
 

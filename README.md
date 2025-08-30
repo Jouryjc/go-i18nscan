@@ -201,6 +201,22 @@ text,file,position_start,position_end,argument_index,extracted_at
 
 详细配置说明请参考 [.github/README.md](.github/README.md)
 
+## GitHub Actions 自动发布
+
+本项目配置了 GitHub Actions 自动发布流程。详细信息请参考：
+
+- [GitHub Actions 配置说明](.github/README.md)
+- [发布流程文档](RELEASE.md)
+- [NPM 认证问题修复指南](NPM_AUTH_FIX.md)
+
+### 常见问题
+
+如果在 CI/CD 过程中遇到 NPM 认证错误，请查看 [NPM_AUTH_FIX.md](NPM_AUTH_FIX.md) 获取快速解决方案。
+
+## 贡献
+
+欢迎提交Issue和Pull Request！
+
 ## 许可证
 
 MIT License
