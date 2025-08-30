@@ -48,7 +48,8 @@ jobs:
           echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           
           # 检查这个版本是否已经发布
-          if npm view i18nscan@$CURRENT_VERSION version 2>/dev/null; then
+          PACKAGE_NAME=$(node -p "require('./package.json').name")
+          if npm view $PACKAGE_NAME@$CURRENT_VERSION version 2>/dev/null; then
             echo "Version $CURRENT_VERSION already exists on NPM"
             echo "should_publish=false" >> $GITHUB_OUTPUT
           else
@@ -91,7 +92,7 @@ jobs:
             
             ### 安装方式
             ```bash
-            npm install -g i18nscan@${{ steps.version.outputs.current_version }}
+            npm install -g go-i18nscan@${{ steps.version.outputs.current_version }}
             ```
           draft: false
           prerelease: false
@@ -100,8 +101,8 @@ jobs:
       - name: Notify success
         if: steps.version.outputs.should_publish == 'true'
         run: |
-          echo "✅ Successfully published i18nscan@${{ steps.version.outputs.current_version }} to NPM"
-          echo "📦 Package URL: https://www.npmjs.com/package/i18nscan"
+          echo "✅ Successfully published go-i18nscan@${{ steps.version.outputs.current_version }} to NPM"
+          echo "📦 Package URL: https://www.npmjs.com/package/go-i18nscan"
       
       - name: Notify skip
         if: steps.version.outputs.should_publish == 'false'
