@@ -1,0 +1,70 @@
+# i18n中文词条提取器配置文件
+
+# i18n函数表达式配置
+i18n_functions:
+  # 支持的i18n函数名列表
+  - name: "t"
+    description: "基础翻译函数"
+  - name: "i18n.T"
+    description: "i18n包的翻译函数"
+  - name: "Translate"
+    description: "自定义翻译函数"
+  - name: "GetText"
+    description: "GetText风格的翻译函数"
+
+# 函数调用模式匹配
+function_patterns:
+  # 匹配函数调用的正则表达式
+  - pattern: "\\b(t|i18n\\.T|Translate|GetText)\\s*\\("
+    description: "匹配i18n函数调用"
+  # 匹配带命名空间的函数调用
+  - pattern: "\\w+\\.(t|T|Translate)\\s*\\("
+    description: "匹配带命名空间的i18n函数"
+
+# 已翻译词条文件配置
+translated_files:
+  # 中文词条文件
+  zh_cn: "./locales/zh-CN.json"
+  # 英文词条文件
+  en_us: "./locales/en-US.json"
+  # 其他语言文件
+  ja_jp: "./locales/ja-JP.json"
+
+# 扫描配置
+scan_config:
+  # 要扫描的Go文件目录
+  source_dirs:
+    - "./examples"
+  # 排除的目录
+  exclude_dirs:
+    - "./vendor"
+    - "./node_modules"
+    - "./.git"
+  # 文件扩展名
+  file_extensions:
+    - ".go"
+  # 是否递归扫描子目录
+  recursive: true
+
+# 输出配置
+output_config:
+  # 输出文件路径
+  output_file: "./extracted_terms.json"
+  # 输出格式 (json, csv, yaml)
+  format: "json"
+  # 是否包含文件位置信息
+  include_location: true
+  # 是否去重
+  deduplicate: true
+
+# 中文检测配置
+chinese_detection:
+  # 中文字符范围
+  unicode_ranges:
+    - "\\u4e00-\\u9fff"  # 基本汉字
+    - "\\u3400-\\u4dbf"  # 扩展A
+    - "\\uf900-\\ufaff"  # 兼容汉字
+  # 最小中文字符数
+  min_chinese_chars: 1
+  # 是否忽略纯数字和符号
+  ignore_numbers_only: true

@@ -1,0 +1,34 @@
+i18n_functions:
+  - name: t
+    description: 基础翻译函数
+  - name: i18n.T
+    description: i18n包的翻译函数
+  - name: Translate
+    description: 自定义翻译函数
+function_patterns:
+  - pattern: \b(t|i18n\.T|Translate)\s*\(
+    description: 匹配i18n函数调用
+translated_files:
+  zh_cn: ./locales/zh-CN.json
+  en_us: ./locales/en-US.json
+scan_config:
+  source_dirs:
+    - ./src
+    - ./internal
+  exclude_dirs:
+    - ./vendor
+    - ./node_modules
+  file_extensions:
+    - .go
+  recursive: true
+output_config:
+  output_file: ./extracted_terms.json
+  format: json
+  include_location: true
+  deduplicate: true
+chinese_detection:
+  unicode_ranges:
+    - \u4e00-\u9fff
+    - \u3400-\u4dbf
+  min_chinese_chars: 1
+  ignore_numbers_only: true
