@@ -1,6 +1,6 @@
 {
   "name": "go-i18nscan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Go项目中文词条提取器 - 基于AST解析识别i18n函数中的中文词条",
   "main": "src/index.js",
   "bin": {
