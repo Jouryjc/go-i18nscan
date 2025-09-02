@@ -19,24 +19,50 @@
 
 ## 安装
 
+### 全局安装（推荐）
+
 ```bash
-npm install -g i18nscan
+npm install -g go-i18nscan
 ```
+
+全局安装后，您可以在任何Go项目目录中直接使用 `go-i18nscan` 命令。
+
+### 本地开发安装
 
 或者克隆项目本地使用：
 
 ```bash
 git clone <repository-url>
-cd i18nscan
+cd go-i18nscan
 npm install
+```
+
+## 使用示例
+
+全局安装后，您可以在任何Go项目中使用：
+
+```bash
+# 进入您的Go项目目录
+cd /path/to/your/go-project
+
+# 初始化配置文件
+go-i18nscan init
+
+# 扫描项目中的中文词条
+go-i18nscan scan
+
+# 查看扫描统计
+go-i18nscan stats
 ```
 
 ## 快速开始
 
 ### 1. 初始化配置
 
+在任何Go项目目录中运行：
+
 ```bash
-node bin/cli.js init
+go-i18nscan init
 ```
 
 这将在当前目录创建一个 `ci.yaml` 配置文件。
@@ -44,19 +70,25 @@ node bin/cli.js init
 ### 2. 扫描项目
 
 ```bash
-node bin/cli.js scan
+go-i18nscan
+```
+
+或者使用完整的scan命令：
+
+```bash
+go-i18nscan scan
 ```
 
 ### 3. 查看统计信息
 
 ```bash
-node bin/cli.js stats
+go-i18nscan stats
 ```
 
 ### 4. 验证环境
 
 ```bash
-node bin/cli.js validate
+go-i18nscan validate
 ```
 
 ## 配置文件
@@ -101,7 +133,7 @@ translation_files:
 ### scan 命令
 
 ```bash
-node bin/cli.js scan [options]
+go-i18nscan scan [options]
 ```
 
 选项：
@@ -115,7 +147,7 @@ node bin/cli.js scan [options]
 ### validate 命令
 
 ```bash
-node bin/cli.js validate [options]
+go-i18nscan validate [options]
 ```
 
 验证Go环境和配置文件的有效性。
@@ -123,7 +155,7 @@ node bin/cli.js validate [options]
 ### stats 命令
 
 ```bash
-node bin/cli.js stats [options]
+go-i18nscan stats [options]
 ```
 
 显示项目的i18n统计信息。
@@ -131,7 +163,7 @@ node bin/cli.js stats [options]
 ### init 命令
 
 ```bash
-node bin/cli.js init [options]
+go-i18nscan init [options]
 ```
 
 选项：
